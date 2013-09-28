@@ -21,7 +21,6 @@ app.calculate = function () {
 	if (lmp == '' || lmp == null) return this.set_result('None', 'None')
 
 	var days_to_add = 280 + Number(this.$cycle_length.val()) - 28
-	console.log(days_to_add, lmp)
 	var n_rule = moment(lmp).add('days', days_to_add).format("MMMM Do YYYY")
 	var gestation = this.get_gestation(lmp)
 
